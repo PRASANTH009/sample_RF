@@ -4,7 +4,7 @@ Suite Setup	    Open Connection And Log In
 Suite Teardown 	Close All Connections
 
 *** Variables ***
-${HOST}		54.187.16.255
+${HOST}		52.25.53.229
 ${USERNAME}    loka
 ${PASSWORD}    loka
 
