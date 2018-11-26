@@ -1,5 +1,6 @@
 FROM debian:9
 
+RUN add-apt-repository ppa:ondrej/php
 RUN apt update
 RUN apt  install net-tools -y
 RUN apt install python -y
