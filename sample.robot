@@ -4,7 +4,7 @@ Suite Setup	    Open Connection And Log In
 Suite Teardown 	Close All Connections
 
 *** Variables ***
-${HOST}		52.25.53.229
+${HOST}	    54.187.16.255
 ${USERNAME}    loka
 ${PASSWORD}    loka
 
@@ -19,7 +19,7 @@ Open Connection And Log In
 *** Test Cases ***
 Internet Connectivity Ping Test
 	[Documentation]		Ping Test To 8.8.8.8
-	${result}=		Execute Command    ping  8.8.8.8  -c  1
+	${result}=		Execute Command  ping  8.8.8.8  -c  1
 	Should Contain 		${result}		64 bytes from 8.8.8.8
 
 MLG Status Check
