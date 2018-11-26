@@ -1,7 +1,7 @@
 FROM debian:9
 
 
-RUN apt update
+RUN apt update && apt-get install -y apt-transport-https
 RUN apt  install net-tools -y
 RUN apt install python -y
 RUN apt install python-pip -y
