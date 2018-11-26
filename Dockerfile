@@ -6,7 +6,7 @@ RUN apt  install net-tools -y
 RUN apt install python -y
 RUN apt install python-pip -y
 RUN apt install -y apache2 
-RUN apt-get install -y libcurl3 php5-curl
+RUN apt-get install -y libcurl3
 RUN apt install curl -y
 RUN pip install robotframework
 RUN pip install robotframework-rammbock
