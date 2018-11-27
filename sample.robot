@@ -36,5 +36,8 @@ List Content Using Current Working Directory
     Should Contain  ${listing}  ${REMOTE HOME TEST}
 
 
+Execute Time Consuming Sudo Command
+    ${stdout} =  Execute Command  -k sleep 5; echo 'hello'  
+    Should Contain  ${stdout}  cat
 	
 	
