@@ -8,7 +8,7 @@ Suite Teardown 	Close All Connections
 ${HOST}	    54.187.16.255
 ${USERNAME}    loka
 ${PASSWORD}    loka
-${REMOTE HOME TEST}       heelo.txt
+${REMOTE HOME TEST}       hello.txt
 
 
 
