@@ -26,7 +26,7 @@ Internet Connectivity Ping Test
 	
 Sever port checking 
   [Documentation]  Checking port on  server
-  ${result}=  Run Process  nmap  -p  80  localhost
+  ${result}=  Run Process  nmap  -p  22  ${HOST}
   Should Contain  ${result.stdout}  open
 
 MLG Status Check
