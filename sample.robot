@@ -1,5 +1,6 @@
 *** setting ***
 Library	  	SSHLibrary
+Library    Process
 Suite Setup	    Open Connection And Log In
 Suite Teardown 	Close All Connections
 
@@ -19,8 +20,14 @@ Open Connection And Log In
 *** Test Cases ***
 Internet Connectivity Ping Test
 	[Documentation]		Ping Test To 8.8.8.8
-	${result}=		Execute Command  ping  8.8.8.8  -c  1
+	${result}=		Execute Command  ping 8.8.8.8 -c 1
 	Should Contain 		${result}		64 bytes from 8.8.8.8
+	
+	
+Sever port checking 
+  [Documentation]  Checking port on  server
+  ${result}=  Run Process  nmap  -p  80  localhost
+  Should Contain  ${result.stdout}  open
 
 MLG Status Check
     [Documentation]  Check MLAG Health
@@ -34,7 +41,7 @@ Spanning Tree Status Check
 
 BGP Health Check
     [Documentation]    Check BGP State
-	${output}=    Execute Command   net  show  bgp  neighbour
+	${output}=    Execute Command   net show bgp neighbour
 	Should Contain    ${output}    BGP  sate = Established
 	
 	
