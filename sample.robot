@@ -37,7 +37,7 @@ List Content Using Current Working Directory
 
 
 Execute Time Consuming Sudo Command
-    ${stdout} =  Execute Command  -k sleep 5; echo 'hello'  
+    ${stdout} =  Execute Command  -k sleep 5; echo hello  
     Should Contain  ${stdout}  hello
 	
 	
