@@ -35,19 +35,6 @@ List Content Using Current Working Directory
     ${listing} =  List Directory  .
     Should Contain  ${listing}  ${REMOTE HOME TEST}
 
-MLG Status Check
-    [Documentation]  Check MLAG Health
-	${output}=  Execute Command  net  show  clag
-	Should Contain  ${output} The peer is alive
-	
-Spanning Tree Status Check
-    [Documentation]    Check STP Health
-	${output}=    Execute Command  net  show bridge  spanning-tree  json
-    Should Contain  ${output}  "rootpotName":"peerlink"
 
-BGP Health Check
-    [Documentation]    Check BGP State
-	${output}=    Execute Command   net show bgp neighbour
-	Should Contain    ${output}    BGP  sate = Established
 	
 	
