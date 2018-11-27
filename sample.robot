@@ -8,6 +8,7 @@ Suite Teardown 	Close All Connections
 ${HOST}	    54.187.16.255
 ${USERNAME}    loka
 ${PASSWORD}    loka
+${REMOTE HOME TEST}       /home/loka
 
 
 
@@ -28,6 +29,11 @@ Sever port checking
   [Documentation]  Checking port on  server
   ${result}=  Run Process  nmap  -p  22  ${HOST}
   Should Contain  ${result.stdout}  open
+  
+  
+List Content Using Current Working Directory
+    ${listing} =  List Directory  .
+    Should Contain  ${listing}  ${REMOTE HOME TEST}
 
 MLG Status Check
     [Documentation]  Check MLAG Health
