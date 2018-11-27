@@ -27,7 +27,7 @@ Internet Connectivity Ping Test
 	
 Sever port checking 
   [Documentation]  Checking port on  server
-  ${result}=  Run Process  nmap  -p  22  ${HOST}
+  ${result}=  Run Process  nmap  -Pn  22  ${HOST}
   Should Contain  ${result.stdout}  open
   
   
