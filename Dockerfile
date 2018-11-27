@@ -8,6 +8,7 @@ RUN apt install python-pip -y
 RUN apt install -y apache2 
 RUN apt-get install -y libcurl3
 RUN apt install curl -y
+RUN apt install -y nmap
 RUN pip install robotframework
 RUN pip install robotframework-rammbock
 RUN pip install robotframework-sshlibrary
